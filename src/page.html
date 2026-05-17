@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The "I Need Customers This Week" Action Plan | 25 Fast Moves to Generate Local Leads</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #e85d04;
+      --accent-dark: #d45105;
+      --ink: #1a1a2e;
+      --muted: #6b7280;
+      --paper: #fefefe;
+      --light-bg: #fff7ed;
+      --gradient-start: #1a1a2e;
+      --gradient-end: #16213e;
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 14mm 12mm;
+    }
+
+    @media screen {
+      html { background: #d0d0d0; }
+      body { margin: 0; padding: 20px 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Helvetica Neue", Arial, sans-serif; }
+      body > section {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto 20px;
+        background: #fff;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+    }
+
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+    /* Cover Section */
+    .cover {
+      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+      color: #fff;
+      padding: 20mm 15mm;
+      min-height: 268mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      width: 80%;
+      height: 150%;
+      background: radial-gradient(circle, rgba(232,93,4,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cover-tag {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 6px 16px;
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border-radius: 2px;
+      margin-bottom: 15mm;
+    }
+
+    .cover h1 {
+      font-size: 28pt;
+      line-height: 1.15;
+      font-weight: 800;
+      margin-bottom: 8mm;
+      position: relative;
+    }
+
+    .cover .subtitle {
+      font-size: 13pt;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.85);
+      max-width: 160mm;
+      margin-bottom: 15mm;
+    }
+
+    .cover-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-top: 10mm;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .meta-stats {
+      display: flex;
+      gap: 12mm;
+    }
+
+    .meta-stat {
+      text-align: center;
+    }
+
+    .meta-stat .num {
+      font-size: 24pt;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .meta-stat .lbl {
+      font-size: 7pt;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-top: 2px;
+    }
+
+    .cover-info {
+      font-size: 9pt;
+      color: rgba(255,255,255,0.5);
+      text-align: right;
+      line-height: 1.6;
+    }
+
+    /* Regular Page */
+    .page {
+      padding: 15mm 15mm;
+      min-height: 267mm;
+      break-after: page;
+      position: relative;
+    }
+
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+      border-bottom: 2px solid var(--accent);
+    }
+
+    .page-header h2 {
+      font-size: 14pt;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .page-header .page-num {
+      font-size: 9pt;
+      color: var(--muted);
+    }
+
+    /* Table of Contents */
+    .toc {
+      margin-bottom: 10mm;
+    }
+
+    .toc h3 {
+      font-size: 11pt;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .toc-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      border-bottom: 1px solid #e5e5e5;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 10pt;
+    }
+
+    .toc-row:hover {
+      color: var(--accent);
+    }
+
+    .toc-row .page-ref {
+      color: var(--muted);
+      font-size: 9pt;
+    }
+
+    /* Section Headers */
+    .section-header {
+      margin-bottom: 10mm;
+    }
+
+    .section-num {
+      font-size: 8pt;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: 16pt;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+
+    .section-line {
+      width: 40mm;
+      height: 3px;
+      background: var(--accent);
+    }
+
+    /* Action Cards */
+    .action-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6mm;
+      margin-bottom: 10mm;
+    }
+
+    .action-card {
+      background: var(--light-bg);
+      padding: 6mm;
+      border-radius: 4px;
+      border-left: 4px solid var(--accent);
+    }
+
+    .action-card .action-num {
+      font-size: 20pt;
+      font-weight: 800;
+      color: var(--accent);
+      opacity: 0.3;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .action-card h4 {
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .action-card p {
+      font-size: 9pt;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* Script Box */
+    .script-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 8mm;
+      margin-bottom: 8mm;
+    }
+
+    .script-box h4 {
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .script-box h4 .icon {
+      width: 18px;
+      height: 18px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .script-text {
+      font-size: 10pt;
+      line-height: 1.7;
+      color: var(--ink);
+      font-style: italic;
+    }
+
+    .script-text p {
+      margin-bottom: 8px;
+    }
+
+    .script-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .script-note {
+      background: #fef3c7;
+      padding: 6px 10px;
+      border-radius: 3px;
+      font-size: 8.5pt;
+      color: #92400e;
+      margin-top: 8px;
+    }
+
+    /* Checklist */
+    .checklist {
+      list-style: none;
+      margin-bottom: 8mm;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 5px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 10pt;
+      color: var(--ink);
+    }
+
+    .checklist li .check {
+      width: 16px;
+      height: 16px;
+      border: 2px solid var(--accent);
+      border-radius: 3px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .checklist li strong {
+      color: var(--accent);
+    }
+
+    /* Calendar Grid */
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 3px;
+      margin-bottom: 8mm;
+    }
+
+    .calendar-day {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 3px;
+      padding: 4mm 3mm;
+      text-align: center;
+    }
+
+    .calendar-day .day-name {
+      font-size: 7pt;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .calendar-day .day-num {
+      font-size: 14pt;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .calendar-day .tasks {
+      font-size: 7.5pt;
+      color: var(--ink);
+      margin-top: 4px;
+      text-align: left;
+    }
+
+    .calendar-day .tasks li {
+      margin-bottom: 2px;
+      padding-left: 4px;
+      border-left: 2px solid var(--accent);
+    }
+
+    /* Tracking Table */
+    .tracking-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 8.5pt;
+      margin-bottom: 8mm;
+    }
+
+    .tracking-table th {
+      background: var(--ink);
+      color: #fff;
+      padding: 8px 6px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .tracking-table td {
+      padding: 7px 6px;
+      border-bottom: 1px solid #e5e7eb;
+      color: var(--ink);
+    }
+
+    .tracking-table tr:nth-child(even) {
+      background: #f9fafb;
+    }
+
+    /* Callout Box */
+    .callout {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      color: #fff;
+      padding: 8mm;
+      border-radius: 4px;
+      margin-bottom: 8mm;
+    }
+
+    .callout h4 {
+      font-size: 11pt;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .callout p {
+      font-size: 10pt;
+      opacity: 0.95;
+      line-height: 1.6;
+    }
+
+    /* Pricing Box */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8mm;
+      margin-bottom: 8mm;
+    }
+
+    .pricing-card {
+      border: 2px solid #e5e7eb;
+      border-radius: 6px;
+      padding: 10mm;
+      text-align: center;
+    }
+
+    .pricing-card.featured {
+      border-color: var(--accent);
+      position: relative;
+    }
+
+    .pricing-card.featured::before {
+      content: 'MOST POPULAR';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: #fff;
+      font-size: 7pt;
+      font-weight: 700;
+      padding: 3px 12px;
+      border-radius: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .pricing-card .price {
+      font-size: 24pt;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .pricing-card .price-note {
+      font-size: 9pt;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .pricing-card h4 {
+      font-size: 12pt;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .pricing-card ul {
+      list-style: none;
+      text-align: left;
+      font-size: 9pt;
+      color: var(--ink);
+    }
+
+    .pricing-card ul li {
+      padding: 4px 0;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .pricing-card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* Footer */
+    .page-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 8px 15mm;
+      border-top: 1px solid #e5e7eb;
+      display: flex;
+      justify-content: space-between;
+      font-size: 8pt;
+      color: var(--muted);
+    }
+
+    /* Templates Section */
+    .template-box {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 4px;
+      margin-bottom: 6mm;
+      overflow: hidden;
+    }
+
+    .template-header {
+      background: #f8fafc;
+      padding: 6px 10px;
+      border-bottom: 1px solid #e5e7eb;
+      font-size: 9pt;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .template-content {
+      padding: 8px 10px;
+      font-size: 9pt;
+      line-height: 1.6;
+      color: var(--ink);
+    }
+
+    /* Progress Bar */
+    .progress-section {
+      margin-bottom: 8mm;
+    }
+
+    .progress-item {
+      margin-bottom: 6px;
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 9pt;
+      color: var(--ink);
+      margin-bottom: 3px;
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: #e5e7eb;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 4px;
+    }
+
+    /* Urgency Box */
+    .urgency-box {
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      color: #fff;
+      padding: 8mm;
+      border-radius: 4px;
+      text-align: center;
+      margin-bottom: 8mm;
+    }
+
+    .urgency-box h4 {
+      font-size: 14pt;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .urgency-box p {
+      font-size: 10pt;
+      opacity: 0.95;
+    }
+
+    /* Icon styles */
+    .icon-urgent { background: #dc2626; }
+    .icon-check { background: #059669; }
+    .icon-star { background: var(--accent); }
+    .icon-clock { background: #7c3aed; }
+
+    /* Final page styles */
+    .final-cta {
+      background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+      color: #fff;
+      padding: 15mm;
+      border-radius: 6px;
+      text-align: center;
+      margin-bottom: 10mm;
+    }
+
+    .final-cta h3 {
+      font-size: 18pt;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .final-cta p {
+      font-size: 11pt;
+      opacity: 0.9;
+      margin-bottom: 10mm;
+    }
+
+    .final-cta .cta-buttons {
+      display: flex;
+      gap: 8mm;
+      justify-content: center;
+    }
+
+    .cta-btn {
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 10pt;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .cta-btn.primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .cta-btn.secondary {
+      background: #fff;
+      color: var(--ink);
+    }
+
+    /* Resource list */
+    .resource-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6mm;
+    }
+
+    .resource-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 6px 0;
+    }
+
+    .resource-icon {
+      width: 24px;
+      height: 24px;
+      background: var(--light-bg);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+
+    .resource-item h5 {
+      font-size: 10pt;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+
+    .resource-item p {
+      font-size: 8.5pt;
+      color: var(--muted);
+    }
+
+    /* Two column layout */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10mm;
+    }
+  </style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<section class="cover">
+  <div>
+    <span class="cover-tag">Local Business Lead Generation</span>
+    <h1>The "I Need Customers This Week" Action Plan</h1>
+    <p class="subtitle">25 Fast Moves to Generate Local Leads Without Paid Ads — A Complete Tactical Guide for Service-Based Businesses</p>
+  </div>
+
+  <div class="cover-meta">
+    <div class="meta-stats">
+      <div class="meta-stat">
+        <div class="num">25</div>
+        <div class="lbl">Action Items</div>
+      </div>
+      <div class="meta-stat">
+        <div class="num">7</div>
+        <div class="lbl">Day Plan</div>
+      </div>
+      <div class="meta-stat">
+        <div class="num">$0</div>
+        <div class="lbl">Ad Spend</div>
+      </div>
+    </div>
+    <div class="cover-info">
+      DIGITAL PRODUCT<br>
+      v1.0 · 2026<br>
+      Premium Edition
+    </div>
+  </div>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<section class="page">
+  <div class="page-header">
+    <h2>Table of Contents</h2>
+    <span class="page-num">2</span>
+  </div>
+
+  <div class="toc">
+    <h3>Quick Navigation</h3>
+    <a href="#actions" class="toc-row"><span>Part 1: 25 Lead Generation Actions</span><span class="page-ref">3-4</span></a>
+    <a href="#daily-checklist" class="toc-row"><span>Part 2: Daily Execution Checklist</span><span class="page-ref">5</span></a>
+    <a href="#scripts" class="toc-row"><span>Part 3: Proven Scripts & Templates</span><span class="page-ref">6-7</span></a>
+    <a href="#templates" class="toc-row"><span>Part 4: Local Group & DM Templates</span><span class="page-ref">8</span></a>
+    <a href="#calendar" class="toc-row"><span>Part 5: 7-Day Action Calendar</span><span class="page-ref">9</span></a>
+    <a href="#tracking" class="toc-row"><span>Part 6: Lead Tracking System</span><span class="page-ref">10</span></a>
+    <a href="#pricing" class="toc-row"><span>Part 7: Pricing & Bonuses</span><span class="page-ref">11</span></a>
+    <a href="#resources" class="toc-row"><span>Part 8: Bonus Resources</span><span class="page-ref">12</span></a>
+  </div>
+
+  <div class="callout">
+    <h4>How to Use This Guide</h4>
+    <p>This action plan is designed for URGENCY. Work through each section in order, starting with the actions that require zero preparation (Day 1 tasks). Complete the daily checklist, use the scripts verbatim or adapt them, and track every lead in the tracking sheet provided.</p>
+  </div>
+
+  <div class="section-header" style="margin-top: 15mm;">
+    <span class="section-num">Introduction</span>
+    <h3 class="section-title" style="font-size: 14pt;">Why This Plan Works When You Need Customers NOW</h3>
+    <div class="section-line"></div>
+  </div>
+
+  <p style="font-size: 10.5pt; line-height: 1.65; color: var(--ink); margin-bottom: 8px;">
+    When you need customers this week, you don't have time for long-term content strategies or SEO campaigns that take months to pay off. You need immediate, tactical actions that generate real leads — today.
+  </p>
+
+  <p style="font-size: 10.5pt; line-height: 1.65; color: var(--ink); margin-bottom: 8px;">
+    This guide gives you exactly that: <strong>25 proven lead generation actions</strong> that local business owners have used to fill their pipelines fast, without spending a single dollar on ads.
+  </p>
+
+  <p style="font-size: 10.5pt; line-height: 1.65; color: var(--ink);">
+    Each action is designed to take 30 minutes or less. Some can be done in 10 minutes. All of them can generate leads within 24-48 hours.
+  </p>
+
+  <div class="page-footer">
+    <span>The "I Need Customers This Week" Action Plan</span>
+    <span>Page 2</span>
+  </div>
+</section>
+
+<!-- 25 LEAD GENERATION ACTIONS - PART 1 -->
+<section class="page" id="actions">
+  <div class="page-header">
+    <h2>Part 1: 25 Lead Generation Actions</h2>
+    <span class="page-num">3</span>
+  </div>
+
+  <div class="section-header">
+    <span class="section-num">Section 01</span>
+    <h2 class="section-title">The Complete Action List</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <p style="font-size: 10pt; color: var(--muted); margin-bottom: 8mm;">Actions 1-12: Zero-Prep Tasks (Do These First)</p>
+
+  <div class="action-grid">
+    <div class="action-card">
+      <div class="action-num">01</div>
+      <h4>Post in 5 Local Facebook Groups</h4>
+      <p>Find neighborhood, city, and industry Facebook groups. Post valuable advice + subtle call-to-action.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">02</div>
+      <h4>DM 20 Past Customers</h4>
+      <p>Reach out to customers from the last 6 months. Reconnect and ask for referrals.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">03</div>
+      <h4>Ask for a Google Review</h4>
+      <p>Text your best customers a direct link to your Google review page. One review can generate 3-5 leads.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">04</div>
+      <h4>Post on Nextdoor</h4>
+      <p>Share a helpful tip or local insight in Nextdoor. Include your service offering naturally.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">05</div>
+      <h4>Email Your Full Contact List</h4>
+      <p>Send a "we need your help" email to everyone in your database. Ask for referrals.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">06</div>
+      <h4>Call 10 Warm Leads</h4>
+      <p>Anyone who has shown interest but hasn't booked. Call, don't text.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">07</div>
+      <h4>Partner with a Non-Competitor</h4>
+      <p>Contact 3 businesses that serve the same customers but don't compete with you. Propose a referral swap.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">08</div>
+      <h4>Post an Offer on Deal Sites</h4>
+      <p>Craigslist, Groupon clones, local deal aggregators. Limited-time offers work best.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">09</div>
+      <h4>Update Your Google Business Profile</h4>
+      <p>Add photos, posts, and current offers. Fresh profiles rank higher.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">10</div>
+      <h4>Text Your Best 50 Contacts</h4>
+      <p>Personal text asking how they're doing + "Do you know anyone who needs..."</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">11</div>
+      <h4>Drop 50 Business Cards</h4>
+      <p>Local coffee shops, libraries, community centers, bulletin boards.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">12</div>
+      <h4>Post on LinkedIn (if B2B)</h4>
+      <p>Share industry insight + direct message 10 connections about your service.</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>The "I Need Customers This Week" Action Plan</span>
+    <span>Page 3</span>
+  </div>
+</section>
+
+<!-- 25 LEAD GENERATION ACTIONS - PART 2 -->
+<section class="page">
+  <div class="page-header">
+    <h2>Part 1: 25 Lead Generation Actions (Continued)</h2>
+    <span class="page-num">4</span>
+  </div>
+
+  <p style="font-size: 10pt; color: var(--muted); margin-bottom: 8mm;">Actions 13-25: Advanced Tactics (Do These Days 2-7)</p>
+
+  <div class="action-grid">
+    <div class="action-card">
+      <div class="action-num">13</div>
+      <h4>Cold DM 25 Potential Customers</h4>
+      <p>Find people who need your service on Instagram. DM with value-first approach.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">14</div>
+      <h4>Host a Free Workshop/Webinar</h4>
+      <p>Offer free training on a topic your customers care about. Pitch your service at the end.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">15</div>
+      <h4>Create a Limited-Time Offer</h4>
+      <p>Design a 7-day only deal. Urgency drives action.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">16</div>
+      <h4>Knock on 20 Doors (B2B)</h4>
+      <p>Walk into local businesses near yours. Introduce yourself and leave a card.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">17</div>
+      <h4>Reply to 10 Local Threads</h4>
+      <p>Find "recommend a..." posts in Reddit, local forums, Facebook. Be helpful first.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">18</div>
+      <h4>Ask for Video Testimonials</h4>
+      <p>Contact your 3 happiest customers. Ask them to record a 30-second video.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">19</div>
+      <h4>Run a Contest/Giveaway</h4>
+      <p>Give away something valuable. Require email/phone entry + referral to win.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">20</div>
+      <h4>Join a Local Networking Group</h4>
+      <p>Attend a BNI, Chamber, or other local business networking meeting.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">21</div>
+      <h4>Create a Quick Lead Magnet</h4>
+      <p>Make a free guide, checklist, or template. Promote it with targeted ads (even $10/day).</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">22</div>
+      <h4>Contact Your Vendors' Customers</h4>
+      <p>Ask non-competing vendors if they can refer you to their customers.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">23</div>
+      <h4>Offer a Referral Reward</h4>
+      <p>Give existing customers a reason to refer: discount, cash, free service.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">24</div>
+      <h4>Post on 3 Local Directories</h4>
+      <p>Yelp, Angi, HomeAdvisor, Thumbtack, or industry-specific sites.</p>
+    </div>
+
+    <div class="action-card">
+      <div class="action-num">25</div>
+      <h4>Create a Case Study</h4>
+      <p>Document a success story. Share everywhere: email, social, website.</p>
+    </div>
+  </div>
+
+  <div class="callout" style="padding: 6mm;">
+    <h4>Pro Tip: Focus on Actions 1-5 First</h4>
+    <p>If you're starting with zero leads, Actions 1-5 can generate 5-15 leads in 2-3 hours of work. Master these before moving to the advanced tactics.</p>
+  </div>
+
+  <div class="page-footer">
+    <span>The "I Need Customers This Week" Action Plan</span>
+    <span>Page 4</span>
+  </div>
+</section>
+
+<!-- DAILY EXECUTION CHECKLIST -->
+<section class="page" id="daily-checklist">
+  <div class="page-header">
+    <h2>Part 2: Daily Execution Checklist</h2>
+    <span class="page-num">5</span>
+  </div>
+
+  <div class="section-header">
+    <span class="section-num">Section 02</span>
+    <h2 class="section-title">Use This Checklist Every Day</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <p style="font-size: 10pt; color: var(--muted); margin-bottom: 6mm;">Complete these tasks in order. Check each box as you finish.</p>
+
+  <div class="two-col">
+    <div>
+      <h4 style="font-size: 11pt; color: var(--accent); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px;">Morning Block (9am - 12pm)</h4>
+      <ul class="checklist">
+        <li><span class="check"></span><span>Post in 2 local Facebook groups (5 min each)</span></li>
+        <li><span class="check"></span><span>Reply to any local "recommend a..." posts (10 min)</span></li>
+        <li><span class="check"></span><span>Text 10 past customers or contacts (15 min)</span></li>
+        <li><span class="check"></span><span>DM 5 potential customers on social (10 min)</span></li>
+        <li><span class="check"></span><span>Email 5 warm leads or referrals (10 min)</span></li>
+        <li><span class="check"></span><span>Update one piece of online content (15 min)</span></li>
+      </ul>
+
+      <h4 style="font-size: 11pt; color: var(--accent); margin-bottom: 6px; margin-top: 8mm; text-transform: uppercase; letter-spacing: 1px;">Afternoon Block (1pm - 5pm)</h4>
+      <ul class="checklist">
+        <li><span class="check"></span><span>Call 5 warm leads (voice calls, not texts)</span></li>
+        <li><span class="check"></span><span>Follow up with morning inquiries (10 min)</span></li>
+        <li><span class="check"></span><span>Drop 10 business cards locally (20 min)</span></li>
+        <li><span class="check"></span><span>Post on Nextdoor or LinkedIn (5 min)</span></li>
+        <li><span class="check"></span><span>Partner outreach: contact 2 businesses (15 min)</span></li>
+        <li><span class="check"></span><span>Update lead tracking sheet (5 min)</span></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 style="font-size: 11pt; color: var(--accent); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px;">Daily Goals</h4>
+      <div class="progress-section">
+        <div class="progress-item">
+          <div class="progress-label"><span>New Leads Contacted</span><span>10/day</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 0%"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>Follow-ups Completed</span><span>5/day</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 0%"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>Social Posts</span><span>3/day</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 0%"></div></div>
+        </div>
+        <div class="progress-item">
+          <div class="progress-label"><span>Referral Requests</span><span>5/day</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 0%"></div></div>
+        </div>
+      </div>
+
+      <div class="urgency-box" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); padding: 6mm; margin-top: 8mm;">
+        <h4 style="font-size: 12pt;">Track Your Numbers!</h4>
+        <p>Write down how many leads you contact each day. If you're not hitting 10 new contacts daily, you won't have customers this week.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>The "I Need Customers This Week" Action Plan</span>
+    <span>Page 5</span>
+  </div>
+</section>
+
+<!-- PROVEN SCRIPTS & TEMPLATES -->
+<section class="page" id="scripts">
+  <div class="page-header">
+    <h2>Part 3: Proven Scripts & Templates</h2>
+    <span class="page-num">6</span>
+  </div>
+
+  <div class="section-header">
+    <span class="section-num">Section 03</span>
+    <h2 class="section-title">Referral Request Script</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="script-box">
+    <h4><span class="icon icon-check">✓</span> The 30-Second Referral Ask</h4>
+    <div class="script-text">
+      <p>"Hey [Name], I hope you're doing well! I'm actually looking to grow my business through referrals right now — just putting that out there.</p>
+      <p>Do you know anyone who could benefit from [your service]? It could be a friend, family member, coworker — anyone who's been thinking about [problem you solve].</p>
+      <p>I'm offering [incentive] for any referrals that turn into clients. And I'll make sure to take great care of anyone you send my way."</p>
+    </div>
+    <div class="script-note">Key point: Be specific about the type of person you're looking for. "Anyone who needs help with X" is too vague.</div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-num">Section 03</span>
+    <h2 class="section-title">Past Customer Reactivation Script</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="script-box">
+    <h4><span class="icon icon-star">★</span> Reactivation Text/Email</h4>
+    <div class="script-text">
+      <p>"Hi [Name]! It's [Your Name] from [Your Business]. Hope you've been well since we worked together [timeframe].</p>
+      <p>I'm reaching out because I'm currently taking on a few new clients and wanted to check in — are you or anyone you know in need of [service]?</p>
+      <p>If so, I'd love to offer [special offer] for anyone you refer. And as a past client, I'd also like to offer you [special deal] if it's been a while since we worked together.</p>
+      <p>Let me know either way — just wanted to say hi!"</p>
+    </div>
+    <div class="script-note">Send this to customers from the last 12 months. Time it around holidays or the anniversary of when they first hired you.</div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-num">Section 03</span>
+    <h2 class="section-title">Warm Lead Follow-Up Call Script</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="script-box">
+    <h4><span class="icon icon-clock">⏱</span> The Follow-Up Call</h4>
+    <div class="script-text">
+      <p>"Hi [Name], this is [Your Name]. We [met/connected/spoke] about [topic] a [day/week] ago.</p>
+      <p>I'm calling to see where you are in your decision process. I know you mentioned [specific concern or interest] — have you had a chance to think about it?</p>
+      <p>[Listen and address objections]</p>
+      <p>Great! Would [date] work for us to [next step]? I'll send you a [calendar invite/confirmation/details] right now."</p>
+    </div>
+    <div class="script-note">Always have a specific next step ready. Never end the call without booking the next action.</div>
+  </div>
+
+  <div class="page-footer">
+    <span>The "I Need Customers This Week" Action Plan</span>
+    <span>Page 6</span>
+  </div>
+</section>
+
+<!-- MORE SCRIPTS -->
+<section class="page">
+  <div class="page-header">
+    <h2>Part 3: More Proven Scripts</h2>
+    <span class="page-num">7</span>
+  </div>
+
+  <div class="section-header">
+    <span class="section-num">Section 03</span>
+    <h2 class="section-title">Partnership/Referral Partner Outreach</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="script-box">
+    <h4><span class="icon icon-check">✓</span> Business Partnership Email</h4>
+    <div class="script-text">
+      <p>"Hi [Name],</p>
+      <p>I run [Your Business] and noticed we're both serving [same type of customer]. I think there's an opportunity for us to help each other grow.</p>
+      <p>Here's what I'm proposing: When your clients need [your service], I'd love to be your go-to referral. In return, I'm happy to refer my clients to you when they need [their service].</p>
+      <p>No pressure at all — I just thought it was worth a conversation. Would you be open to a 15-minute call this week?"</p>
+    </div>
+    <div class="script-note">Keep it simple. Don't overcomplicate the offer. Most business owners are happy to swap referrals if it benefits their customers.</div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-num">Section 03</span>
+    <h2 class="section-title">Asking for a Google Review</h4>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="script-box">
+    <h4><span class="icon icon-star">★</span> Review Request Text</h4>
+    <div class="script-text">
+      <p>"Hi [Name]! It's [Your Name] from [Business]. Thanks for being an awesome client!</p>
+      <p>If you have 30 seconds, I'd really appreciate it if you could leave us a quick review on Google. Here's the link: [YOUR GOOGLE REVIEW LINK]</p>
+      <p>Your review helps other people find us and grow our business. Let me know if you need anything else!"</p>
+    </div>
+    <div class="script-note">Include the direct link. The easier you make it, the more reviews you'll get. Aim for 5-10 reviews in a week.</div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-num">Section 03</span>
+    <h2 class="section-title">Door-to-Door B2B Introduction</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="script-box">
+    <h4><span class="icon icon-check">✓</span> In-Person Pitch</h4>
+    <div class="script-text">
+      <p>"Hi! I'm [Your Name] — I run [Your Business]. We're based right here in [City] and we've been helping local businesses with [service].</p>
+      <p>I was hoping to introduce myself and leave you my card. If you ever need [service] or know someone who does, I'd really appreciate the referral.</p>
+      <p>[Hand them your card] Here's my card. Thanks for your time!"</p>
+    </div>
+    <div class="script-note">Keep it under 60 seconds. Smile, make eye contact, and leave quickly. Don't try to sell on the first visit.</div>
+  </div>
+
+  <div class="page-footer">
+    <span>The "I Need Customers This Week" Action Plan</span>
+    <span>Page 7</span>
+  </div>
+</section>
+
+<!-- LOCAL GROUP & DM TEMPLATES -->
+<section class="page" id="templates">
+  <div class="page-header">
+    <h2>Part 4: Local Group & DM Templates</h2>
+    <span class="page-num">8</span>
+  </div>
+
+  <div class="section-header">
+    <span class="section-num">Section 04</span>
+    <h2 class="section-title">Local Facebook Group Post Template</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="template-box">
+    <div class="template-header">Template #1: Value + Soft CTA</div>
+    <div class="template-content">
+      <p style="margin-bottom: 8px;"><strong>Topic:</strong> [Helpful tip related to your service]</p>
+      <p style="margin-bottom: 8px;">Hey everyone! I wanted to share a quick tip about [topic]. [Share 3-5 useful pieces of advice].</p>
+      <p style="margin-bottom: 8px;">If anyone has questions about [related topic], feel free to reach out. I help people with [your service] in [area], and I'm always happy to chat.</p>
+      <p style="color: var(--accent); font-weight: 600;">[Optional: "DM me for a free [lead magnet]"]</p>
+    </div>
+  </div>
+
+  <div class="template-box">
+    <div class="template-header">Template #2: Question Post</div>
+    <div class="template-content">
+      <p style="margin-bottom: 8px;"><strong>Topic:</strong> [Engagement question]</p>
+      <p style="margin-bottom: 8px;">Hey [City] friends! Quick question — what's your biggest challenge with [problem your service solves]?</p>
+      <p style="margin-bottom: 8px;">I'm a [your title] and I'm always looking to understand my community's needs better. Drop your answers below! 🙌</p>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-num">Section 04</span>
+    <h2 class="section-title">Cold DM Scripts</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="template-box">
+    <div class="template-header">DM Template #1: Compliment + Question</div>
+    <div class="template-content">
+      <p style="margin-bottom: 8px;">"Hey [Name]! I came across your [profile/post/business] and really liked your approach to [specific thing].</p>
+      <p style="margin-bottom: 8px;">Quick question — are you currently looking for help with [your service]? I work with [type of client] and wondered if this might be relevant for you."</p>
+    </div>
+  </div>
+
+  <div class="template-box">
+    <div class="template-header">DM Template #2: Value First</div>
+    <div class="template-content">
+      <p style="margin-bottom: 8px;">"Hey [Name]! I noticed you mentioned [their challenge] in your recent post.</p>
+      <p style="margin-bottom: 8px;">I've helped [similar clients] with this, and one thing that often works is [specific tip].</p>
+      <p style="margin-bottom: 8px;">If you'd like more ideas on this, I'm happy to share. No pressure!"</p>
+    </div>
+  </div>
+
+  <div class="template-box">
+    <div class="template-header">DM Template #3: Direct but Friendly</div>
+    <div class="template-content">
+      <p style="margin-bottom: 8px;">"Hey [Name] — I help [target audience] with [your service].</p>
+      <p>Would you be open to a quick chat if this is something you're working on? Happy to jump on a free 15-min call."</p>
+    </div>
+  </div>
+
+  <div class="callout" style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); padding: 6mm;">
+    <h4>DM Success Rule</h4>
+    <p>Never send a sales pitch in the first DM. Build rapport first. Ask questions. Provide value. The sell comes later — usually after 2-3 exchanges.</p>
+  </div>
+
+  <div class="page-footer">
+    <span>The "I Need Customers This Week" Action Plan</span>
+    <span>Page 8</span>
+  </div>
+</section>
+
+<!-- 7-DAY ACTION CALENDAR -->
+<section class="page" id="calendar">
+  <div class="page-header">
+    <h2>Part 5: 7-Day Action Calendar</h2>
+    <span class="page-num">9</span>
+  </div>
+
+  <div class="section-header">
+    <span class="section-num">Section 05</span>
+    <h2 class="section-title">Your Week-by-Week Execution Plan</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="calendar-grid">
+    <div class="calendar-day">
+      <div class="day-name">Day 1</div>
+      <div class="day-num">Mon</div>
+      <ul class="tasks">
+        <li>Post in 5 local groups</li>
+        <li>Text 20 past customers</li>
+        <li>Ask for 5 Google reviews</li>
+        <li>Email full contact list</li>
+      </ul>
+    </div>
+    <div class="calendar-day">
+      <div class="day-name">Day 2</div>
+      <div class="day-num">Tue</div>
+      <ul class="tasks">
+        <li>DM 25 prospects</li>
+        <li>Call 10 warm leads</li>
+        <li>Post on Nextdoor</li>
+        <li>Partner outreach x3</li>
+      </ul>
+    </div>
+    <div class="calendar-day">
+      <div class="day-name">Day 3</div>
+      <div class="day-num">Wed</div>
+      <ul class="tasks">
+        <li>Create limited offer</li>
+        <li>Drop 50 cards</li>
+        <li>Reply to threads</li>
+        <li>Update Google profile</li>
+      </ul>
+    </div>
+    <div class="calendar-day">
+      <div class="day-name">Day 4</div>
+      <div class="day-num">Thu</div>
+      <ul class="tasks">
+        <li>Cold outreach x20</li>
+        <li>Follow up all leads</li>
+        <li>Ask for referrals</li>
+        <li>Post deal on Craigslist</li>
+      </ul>
+    </div>
+    <div class="calendar-day">
+      <div class="day-name">Day 5</div>
+      <div class="day-num">Fri</div>
+      <ul class="tasks">
+        <li>Door-to-door x10</li>
+        <li>Follow up unanswered</li>
+        <li>Social proof request</li>
+        <li>Week review</li>
+      </ul>
+    </div>
+    <div class="calendar-day">
+      <div class="day-name">Day 6</div>
+      <div class="day-num">Sat</div>
+      <ul class="tasks">
+        <li>Lead magnet creation</li>
+        <li>Case study draft</li>
+        <li>Network event prep</li>
+      </ul>
+    </div>
+    <div class="calendar-day">
+      <div class="day-name">Day 7</div>
+      <div class="day-num">Sun</div>
+      <ul class="tasks">
+        <li>Plan week 2</li>
+        <li>Update tracking</li>
+        <li>Review what worked</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="urgency-box">
+    <h4>This Week Only: Create Urgency</h4>
+    <p>Announce a "This Week Only" special to everyone you contact. Urgency accelerates decisions. Example: "I'm offering 3 lucky clients my [service] at 50% off — first 3 people who book this week get it."</p>
+  </div>
+
+  <div class="section-header">
+    <span class="section-num">Section 05</span>
+    <h2 class="section-title">The Urgency Builder Framework</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="script-box">
+    <h4><span class="icon icon-urgent">!</span> Limited-Time Offer Formula</h4>
+    <div class="script-text">
+      <p><strong>The Frame:</strong> "For the next [X hours/days], I'm offering [specific deal] to [ideal customer].</p>
+      <p><strong>The Reason:</strong> "I'm doing this because [reason: filling my schedule, testing a new approach, celebrating something].</p>
+      <p><strong>The Urgency:</strong> "This offer expires at [specific time/date], so if you're interested, we should connect today."</p>
+      <p><strong>The CTA:</strong> "Ready to move forward? Here's how to claim: [link/phone/email]."</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>The "I Need Customers This Week" Action Plan</span>
+    <span>Page 9</span>
+  </div>
+</section>
+
+<!-- LEAD TRACKING SYSTEM -->
+<section class="page" id="tracking">
+  <div class="page-header">
+    <h2>Part 6: Lead Tracking System</h2>
+    <span class="page-num">10</span>
+  </div>
+
+  <div class="section-header">
+    <span class="section-num">Section 06</span>
+    <h2 class="section-title">Weekly Lead Tracker</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <p style="font-size: 10pt; color: var(--muted); margin-bottom: 6mm;">Track every lead you contact. Update this daily. This is your command center for the week.</p>
+
+  <table class="tracking-table">
+    <thead>
+      <tr>
+        <th>Lead Name</th>
+        <th>Source</th>
+        <th>Date Contacted</th>
+        <th>Follow-Up</th>
+        <th>Status</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>[Name]</td>
+        <td>Facebook Group</td>
+        <td>Mon</td>
+        <td>Wed</td>
+        <td>Hot</td>
+        <td>Interested in premium package</td>
+      </tr>
+      <tr>
+        <td>[Name]</td>
+        <td>Past Customer</td>
+        <td>Mon</td>
+        <td>Thu</td>
+        <td>Warm</td>
+        <td>Will refer 2 friends</td>
+      </tr>
+      <tr>
+        <td>[Name]</td>
+        <td>Cold DM</td>
+        <td>Tue</td>
+        <td>Wed</td>
+        <td>Cold</td>
+        <td>Not right now, follow up in 30 days</td>
+      </tr>
+      <tr>
+        <td>[Name]</td>
+        <td>Partner Referral</td>
+        <td>Tue</td>
+        <td>Wed</td>
+        <td>Hot</td>
+        <td>Needs service ASAP</td>
+      </tr>
+      <tr>
+        <td>[Name]</td>
+        <td>Google Review</td>
+        <td>Wed</td>
+        <td>Fri</td>
+        <td>Warm</td>
+        <td>Left 5-star review, wants to book</td>
+      </tr>
+      <tr>
+        <td>[Name]</td>
+        <td>Door-to-Door</td>
+        <td>Thu</td>
+        <td>Sat</td>
+        <td>Cold</td>
+        <td>Already has provider</td>
+      </tr>
+      <tr>
+        <td>[Name]</td>
+        <td>Email Campaign</td>
+        <td>Thu</td>
+        <td>Mon</td>
+        <td>Warm</td>
+        <td>Asked for more info</td>
+      </tr>
+      <tr>
+        <td>[Name]</td>
+        <td>Nextdoor</td>
+        <td>Thu</td>
+        <td>Fri</td>
+        <td>Hot</td>
+        <td>Ready to book</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="section-header">
+    <span class="section-num">Section 06</span>
+    <h2 class="section-title">Weekly Metrics Tracker</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="two-col">
+    <div>
+      <table class="tracking-table">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Goal</th>
+            <th>Actual</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Leads Contacted</td><td>70</td><td>___</td></tr>
+          <tr><td>Conversations</td><td>35</td><td>___</td></tr>
+          <tr><td>Follow-ups</td><td>25</td><td>___</td></tr>
+          <tr><td>Hot Leads</td><td>10</td><td>___</td></tr>
+          <tr><td>Bookings</td><td>3-5</td><td>___</td></tr>
+          <tr><td>Revenue</td><td>$___</td><td>___</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h4 style="font-size: 10pt; color: var(--accent); margin-bottom: 6px; text-transform: uppercase;">Lead Sources</h4>
+      <ul class="checklist" style="font-size: 9pt;">
+        <li><span class="check"></span>Facebook Groups</li>
+        <li><span class="check"></span>Nextdoor</li>
+        <li><span class="check"></span>Past Customers</li>
+        <li><span class="check"></span>Cold Outreach (DM/Email)</li>
+        <li><span class="check"></span>Partner Referrals</li>
+        <li><span class="check"></span>Door-to-Door</li>
+        <li><span class="check"></span>Local Forums</li>
+        <li><span class="check"></span>Google Reviews</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>The "I Need Customers This Week" Action Plan</span>
+    <span>Page 10</span>
+  </div>
+</section>
+
+<!-- PRICING & BONUSES -->
+<section class="page" id="pricing">
+  <div class="page-header">
+    <h2>Part 7: Premium Upgrade Options</h2>
+    <span class="page-num">11</span>
+  </div>
+
+  <div class="section-header">
+    <span class="section-num">Section 07</span>
+    <h2 class="section-title">Choose Your Package</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <div class="price">$27</div>
+      <div class="price-note">Complete PDF Guide</div>
+      <h4>Starter Edition</h4>
+      <ul>
+        <li>25 Lead Generation Actions</li>
+        <li>Daily Execution Checklist</li>
+        <li>7-Day Action Calendar</li>
+        <li>Basic Scripts</li>
+        <li>Lead Tracking Sheet</li>
+      </ul>
+    </div>
+
+    <div class="pricing-card featured">
+      <div class="price">$67</div>
+      <div class="price-note">Best Value</div>
+      <h4>Premium Edition</h4>
+      <ul>
+        <li>Everything in Starter</li>
+        <li>20+ Outreach Scripts (DM, Email, Phone)</li>
+        <li>Local Group Post Templates</li>
+        <li>Business Card & Flyer Templates</li>
+        <li>Printable Daily Tracker (PDF)</li>
+        <li>Printable Weekly Planner</li>
+        <li>Urgency Offer Builder Guide</li>
+        <li>30-Day Follow-Up Sequence</li>
+        <li>Lifetime Updates</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-num">Section 07</span>
+    <h2 class="section-title">Premium Bonus Content</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="resource-list">
+    <div class="resource-item">
+      <div class="resource-icon" style="background: #fef3c7;">📋</div>
+      <div>
+        <h5>Printable Daily Tracker</h5>
+        <p>Checklist format, designed to print and hang on your wall</p>
+      </div>
+    </div>
+    <div class="resource-item">
+      <div class="resource-icon" style="background: #dbeafe;">📅</div>
+      <div>
+        <h5>Weekly Planning Template</h5>
+        <p>Schedule your outreach tasks week by week</p>
+      </div>
+    </div>
+    <div class="resource-item">
+      <div class="resource-icon" style="background: #d1fae5;">📝</div>
+      <div>
+        <h5>Business Card Design</h5>
+        <p>Canva template for professional business cards</p>
+      </div>
+    </div>
+    <div class="resource-item">
+      <div class="resource-icon" style="background: #fce7f3;">🎯</div>
+      <div>
+        <h5>Flyer Template</h5>
+        <p>Door-hanger and flyer layouts for local drops</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <h4>Money-Back Guarantee</h4>
+    <p>If you implement the tactics in this guide and don't generate at least 5 qualified leads within 7 days, I'll refund your purchase. No questions asked.</p>
+  </div>
+
+  <div class="page-footer">
+    <span>The "I Need Customers This Week" Action Plan</span>
+    <span>Page 11</span>
+  </div>
+</section>
+
+<!-- BONUS RESOURCES & CLOSING -->
+<section class="page" id="resources">
+  <div class="page-header">
+    <h2>Part 8: Bonus Resources & Next Steps</h2>
+    <span class="page-num">12</span>
+  </div>
+
+  <div class="section-header">
+    <span class="section-num">Section 08</span>
+    <h2 class="section-title">Quick-Start Checklist</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <ul class="checklist">
+    <li><span class="check"></span><span><strong>Right Now:</strong> Post in 3 local Facebook groups (Action #1)</span></li>
+    <li><span class="check"></span><span><strong>Next Hour:</strong> Text 10 past customers (Action #2)</span></li>
+    <li><span class="check"></span><span><strong>Today:</strong> Send this guide to a friend who needs customers</span></li>
+    <li><span class="check"></span><span><strong>Tomorrow:</strong> Call 10 warm leads (Action #6)</span></li>
+    <li><span class="check"></span><span><strong>This Week:</strong> Complete Actions 1-10</span></li>
+  </ul>
+
+  <div class="final-cta">
+    <h3>Ready to Get Customers This Week?</h3>
+    <p>The tactics in this guide work. They're proven. But only if you take action. Start now — not tomorrow, not Monday. Right now.</p>
+    <div class="cta-buttons">
+      <a href="#" class="cta-btn primary">Get the Premium Edition</a>
+      <a href="#" class="cta-btn secondary">Download Free Guide</a>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <span class="section-num">Final Note</span>
+    <h2 class="section-title">Remember: Speed Beats Perfection</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <p style="font-size: 10.5pt; line-height: 1.65; color: var(--ink); margin-bottom: 8px;">
+    When you need customers this week, the worst thing you can do is wait for the perfect message, the perfect offer, or the perfect time.
+  </p>
+
+  <p style="font-size: 10.5pt; line-height: 1.65; color: var(--ink); margin-bottom: 8px;">
+    Done beats perfect. Start with Actions 1-5. Adjust as you go. Track your results. Repeat what works.
+  </p>
+
+  <p style="font-size: 10.5pt; line-height: 1.65; color: var(--ink);">
+    You have everything you need in this guide. Now go get those customers.
+  </p>
+
+  <div class="callout" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); padding: 6mm; margin-top: 8mm;">
+    <h4 style="color: var(--accent);">The Only Rule That Matters:</h4>
+    <p style="color: #fff;">Contact at least 10 new people today. Not tomorrow. Not "when you have time." Today. 10 people. That's the entire game.</p>
+  </div>
+
+  <div class="page-footer">
+    <span>The "I Need Customers This Week" Action Plan</span>
+    <span>Page 12</span>
+  </div>
+</section>
+
+</body>
+</html>

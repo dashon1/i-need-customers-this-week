@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Printable Trackers | "I Need Customers This Week"</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent: #e85d04;
+      --ink: #1a1a2e;
+      --muted: #6b7280;
+      --light-bg: #fff7ed;
+    }
+    @page { size: A4 portrait; margin: 14mm 12mm; }
+    @media screen {
+      html { background: #d0d0d0; }
+      body { margin: 0; padding: 20px 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Helvetica Neue", Arial, sans-serif; }
+      body > section { width: 210mm; min-height: 297mm; margin: 0 auto 20px; background: #fff; box-shadow: 0 4px 24px rgba(0,0,0,0.18); box-sizing: border-box; overflow: hidden; }
+    }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+    .page { padding: 15mm 15mm; min-height: 267mm; break-after: page; position: relative; }
+
+    .header { border-bottom: 3px solid var(--accent); padding-bottom: 10px; margin-bottom: 12px; }
+    .header h1 { font-size: 16pt; font-weight: 800; color: var(--ink); }
+    .header .subtitle { font-size: 9pt; color: var(--muted); }
+
+    .tracker-title { font-size: 14pt; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+    .tracker-subtitle { font-size: 9pt; color: var(--muted); margin-bottom: 8mm; }
+
+    .checklist-table { width: 100%; border-collapse: collapse; font-size: 9.5pt; }
+    .checklist-table th { background: var(--ink); color: #fff; padding: 8px 6px; text-align: left; font-weight: 600; }
+    .checklist-table td { padding: 6px 4px; border-bottom: 1px solid #e5e7eb; }
+    .checklist-table .checkbox { width: 20px; height: 20px; border: 2px solid var(--accent); border-radius: 3px; display: inline-block; }
+    .checklist-table .task { font-weight: 500; }
+    .checklist-table .time { color: var(--muted); font-size: 8pt; white-space: nowrap; }
+
+    .daily-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .day-label { background: var(--accent); color: #fff; padding: 4px 12px; font-weight: 700; font-size: 11pt; }
+    .date-field { font-size: 9pt; color: var(--muted); }
+
+    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 8mm; }
+    .stat-box { background: var(--light-bg); padding: 6px; border-radius: 4px; text-align: center; }
+    .stat-box .value { font-size: 16pt; font-weight: 800; color: var(--accent); }
+    .stat-box .label { font-size: 7pt; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .notes-section { margin-top: 8mm; }
+    .notes-section h4 { font-size: 10pt; color: var(--accent); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 1px; }
+    .notes-box { border: 1px dashed #ccc; height: 40mm; padding: 8px; font-size: 9pt; color: var(--muted); }
+
+    .footer { position: absolute; bottom: 0; left: 0; right: 0; padding: 8px 15mm; border-top: 1px solid #e5e7eb; display: flex; justify-content: space-between; font-size: 8pt; color: var(--muted); }
+
+    .week-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; margin-bottom: 8mm; }
+    .week-day { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 3px; padding: 4mm 3mm; }
+    .week-day .day-name { font-size: 8pt; color: var(--muted); text-transform: uppercase; margin-bottom: 4px; }
+    .week-day .goals { font-size: 8pt; }
+    .week-day .goals li { margin-bottom: 3px; padding-left: 8px; border-left: 2px solid var(--accent); }
+
+    .summary-table { width: 100%; border-collapse: collapse; margin-bottom: 8mm; }
+    .summary-table th { background: var(--accent); color: #fff; padding: 8px; text-align: center; font-weight: 600; }
+    .summary-table td { padding: 8px; border: 1px solid #e5e7eb; text-align: center; }
+    .summary-table .total { font-weight: 700; background: var(--light-bg); }
+
+    .page-num { font-size: 9pt; color: var(--muted); text-align: right; }
+  </style>
+</head>
+<body>
+
+<!-- DAILY TRACKER PAGE 1 -->
+<section class="page">
+  <div class="header">
+    <h1>Daily Action Tracker</h1>
+    <div class="subtitle">"I Need Customers This Week" Premium Package</div>
+  </div>
+
+  <div class="daily-header">
+    <span class="day-label">MONDAY</span>
+    <span class="date-field">Date: ____________</span>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="value">___/10</div><div class="label">Leads Contacted</div></div>
+    <div class="stat-box"><div class="value">___/5</div><div class="label">Follow-ups</div></div>
+    <div class="stat-box"><div class="value">___/3</div><div class="label">Social Posts</div></div>
+    <div class="stat-box"><div class="value">___/5</div><div class="label">Referral Asks</div></div>
+  </div>
+
+  <table class="checklist-table">
+    <thead>
+      <tr>
+        <th style="width: 30px;">✓</th>
+        <th>Task</th>
+        <th style="width: 50px;">Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="checkbox"></span></td><td class="task">Post in 2 local Facebook groups</td><td class="time">10 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Reply to local "recommend..." posts</td><td class="time">10 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Text 10 past customers</td><td class="time">15 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">DM 5 potential customers</td><td class="time">10 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Email 5 warm leads</td><td class="time">10 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Call 5 warm leads</td><td class="time">20 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Follow up with morning inquiries</td><td class="time">10 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Drop 10 business cards locally</td><td class="time">20 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Post on Nextdoor or LinkedIn</td><td class="time">5 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Partner outreach: 2 businesses</td><td class="time">15 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Update lead tracking sheet</td><td class="time">5 min</td></tr>
+    </tbody>
+  </table>
+
+  <div class="notes-section">
+    <h4>Notes & Follow-ups</h4>
+    <div class="notes-box"></div>
+  </div>
+
+  <div class="footer">
+    <span>Daily Action Tracker | "I Need Customers This Week"</span>
+    <span>Page 1</span>
+  </div>
+</section>
+
+<!-- DAILY TRACKER PAGE 2 -->
+<section class="page">
+  <div class="header">
+    <h1>Daily Action Tracker</h1>
+    <div class="subtitle">"I Need Customers This Week" Premium Package</div>
+  </div>
+
+  <div class="daily-header">
+    <span class="day-label">TUESDAY</span>
+    <span class="date-field">Date: ____________</span>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="value">___/10</div><div class="label">Leads Contacted</div></div>
+    <div class="stat-box"><div class="value">___/5</div><div class="label">Follow-ups</div></div>
+    <div class="stat-box"><div class="value">___/3</div><div class="label">Social Posts</div></div>
+    <div class="stat-box"><div class="value">___/5</div><div class="label">Referral Asks</div></div>
+  </div>
+
+  <table class="checklist-table">
+    <thead>
+      <tr>
+        <th style="width: 30px;">✓</th>
+        <th>Task</th>
+        <th style="width: 50px;">Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="checkbox"></span></td><td class="task">Post in 2 local Facebook groups</td><td class="time">10 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">DM 25 prospects</td><td class="time">25 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Call 10 warm leads</td><td class="time">30 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Post on Nextdoor</td><td class="time">5 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Partner outreach: 3 businesses</td><td class="time">20 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Ask for Google reviews (5 people)</td><td class="time">10 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Follow up Monday leads</td><td class="time">15 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Drop 10 business cards</td><td class="time">20 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Update Google Business Profile</td><td class="time">10 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Review tracking sheet</td><td class="time">5 min</td></tr>
+    </tbody>
+  </table>
+
+  <div class="notes-section">
+    <h4>Notes & Follow-ups</h4>
+    <div class="notes-box"></div>
+  </div>
+
+  <div class="footer">
+    <span>Daily Action Tracker | "I Need Customers This Week"</span>
+    <span>Page 2</span>
+  </div>
+</section>
+
+<!-- DAILY TRACKER PAGE 3 -->
+<section class="page">
+  <div class="header">
+    <h1>Daily Action Tracker</h1>
+    <div class="subtitle">"I Need Customers This Week" Premium Package</div>
+  </div>
+
+  <div class="daily-header">
+    <span class="day-label">WEDNESDAY</span>
+    <span class="date-field">Date: ____________</span>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="value">___/10</div><div class="label">Leads Contacted</div></div>
+    <div class="stat-box"><div class="value">___/5</div><div class="label">Follow-ups</div></div>
+    <div class="stat-box"><div class="value">___/3</div><div class="label">Social Posts</div></div>
+    <div class="stat-box"><div class="value">___/5</div><div class="label">Referral Asks</div></div>
+  </div>
+
+  <table class="checklist-table">
+    <thead>
+      <tr>
+        <th style="width: 30px;">✓</th>
+        <th>Task</th>
+        <th style="width: 50px;">Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="checkbox"></span></td><td class="task">Create/review limited-time offer</td><td class="time">20 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Drop 50 business cards</td><td class="time">40 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Reply to local forum threads</td><td class="time">15 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Email your full contact list</td><td class="time">15 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Post on 3 local deal sites</td><td class="time">15 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Follow up Tuesday leads</td><td class="time">15 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Call 5 warm leads</td><td class="time">20 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Partner outreach: 2 businesses</td><td class="time">15 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Update tracking sheet</td><td class="time">5 min</td></tr>
+    </tbody>
+  </table>
+
+  <div class="notes-section">
+    <h4>Notes & Follow-ups</h4>
+    <div class="notes-box"></div>
+  </div>
+
+  <div class="footer">
+    <span>Daily Action Tracker | "I Need Customers This Week"</span>
+    <span>Page 3</span>
+  </div>
+</section>
+
+<!-- DAILY TRACKER PAGE 4 -->
+<section class="page">
+  <div class="header">
+    <h1>Daily Action Tracker</h1>
+    <div class="subtitle">"I Need Customers This Week" Premium Package</div>
+  </div>
+
+  <div class="daily-header">
+    <span class="day-label">THURSDAY</span>
+    <span class="date-field">Date: ____________</span>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="value">___/10</div><div class="label">Leads Contacted</div></div>
+    <div class="stat-box"><div class="value">___/5</div><div class="label">Follow-ups</div></div>
+    <div class="stat-box"><div class="value">___/3</div><div class="label">Social Posts</div></div>
+    <div class="stat-box"><div class="value">___/5</div><div class="label">Referral Asks</div></div>
+  </div>
+
+  <table class="checklist-table">
+    <thead>
+      <tr>
+        <th style="width: 30px;">✓</th>
+        <th>Task</th>
+        <th style="width: 50px;">Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="checkbox"></span></td><td class="task">Cold outreach: 20 new contacts</td><td class="time">30 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Follow up all unanswered leads</td><td class="time">20 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Ask existing customers for referrals</td><td class="time">15 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Post deal on Craigslist</td><td class="time">10 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Post in 2 local groups</td><td class="time">10 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Contact 2 referral partners</td><td class="time">15 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Call 5 warm leads</td><td class="time">20 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">DM 10 prospects</td><td class="time">15 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Update tracking sheet</td><td class="time">5 min</td></tr>
+    </tbody>
+  </table>
+
+  <div class="notes-section">
+    <h4>Notes & Follow-ups</h4>
+    <div class="notes-box"></div>
+  </div>
+
+  <div class="footer">
+    <span>Daily Action Tracker | "I Need Customers This Week"</span>
+    <span>Page 4</span>
+  </div>
+</section>
+
+<!-- DAILY TRACKER PAGE 5 -->
+<section class="page">
+  <div class="header">
+    <h1>Daily Action Tracker</h1>
+    <div class="subtitle">"I Need Customers This Week" Premium Package</div>
+  </div>
+
+  <div class="daily-header">
+    <span class="day-label">FRIDAY</span>
+    <span class="date-field">Date: ____________</span>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="value">___/10</div><div class="label">Leads Contacted</div></div>
+    <div class="stat-box"><div class="value">___/5</div><div class="label">Follow-ups</div></div>
+    <div class="stat-box"><div class="value">___/3</div><div class="label">Social Posts</div></div>
+    <div class="stat-box"><div class="value">___/5</div><div class="label">Referral Asks</div></div>
+  </div>
+
+  <table class="checklist-table">
+    <thead>
+      <tr>
+        <th style="width: 30px;">✓</th>
+        <th>Task</th>
+        <th style="width: 50px;">Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="checkbox"></span></td><td class="task">Door-to-door outreach: 10 businesses</td><td class="time">45 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Follow up unanswered leads</td><td class="time">20 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Request video testimonials (3 customers)</td><td class="time">15 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Post on LinkedIn/Nextdoor</td><td class="time">10 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Call 5 warm leads</td><td class="time">20 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Reply to local threads</td><td class="time">10 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Update all directories</td><td class="time">15 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Week review & planning</td><td class="time">20 min</td></tr>
+      <tr><td><span class="checkbox"></span></td><td class="task">Update tracking sheet</td><td class="time">5 min</td></tr>
+    </tbody>
+  </table>
+
+  <div class="notes-section">
+    <h4>Notes & Follow-ups</h4>
+    <div class="notes-box"></div>
+  </div>
+
+  <div class="footer">
+    <span>Daily Action Tracker | "I Need Customers This Week"</span>
+    <span>Page 5</span>
+  </div>
+</section>
+
+<!-- WEEKLY SUMMARY PAGE -->
+<section class="page">
+  <div class="header">
+    <h1>Weekly Summary & Metrics</h1>
+    <div class="subtitle">"I Need Customers This Week" Premium Package</div>
+  </div>
+
+  <p style="font-size: 10pt; color: var(--muted); margin-bottom: 8mm;">Fill this in at the end of each week to track your progress.</p>
+
+  <table class="summary-table">
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Leads</th>
+        <th>Follow-ups</th>
+        <th>Posts</th>
+        <th>Referrals</th>
+        <th>Revenue</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Monday</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>Tuesday</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>Wednesday</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>Thursday</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>Friday</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr class="total"><td>TOTAL</td><td></td><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+
+  <div class="tracker-title">What Worked Best This Week?</div>
+  <div class="notes-box" style="height: 25mm; margin-bottom: 8mm;"></div>
+
+  <div class="tracker-title">What to Improve Next Week?</div>
+  <div class="notes-box" style="height: 25mm;"></div>
+
+  <div style="background: var(--light-bg); padding: 6mm; border-radius: 4px; margin-top: 8mm;">
+    <div class="tracker-title" style="color: var(--accent);">Key Wins This Week</div>
+    <ul style="font-size: 9.5pt; margin-left: 16px; margin-top: 6px;">
+      <li>_______________________________________________</li>
+      <li>_______________________________________________</li>
+      <li>_______________________________________________</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <span>Weekly Summary | "I Need Customers This Week"</span>
+    <span>Page 6</span>
+  </div>
+</section>
+
+</body>
+</html>
